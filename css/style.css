@@ -1,6 +1,5 @@
 /****** General ***********/
 *, ::before, ::after {
-    font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +9,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --grey: #d9d9d9;
 }
 
 .fa-solid {
@@ -17,6 +17,7 @@
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
 }
@@ -59,6 +60,65 @@ nav img {
     border-top-color: var(--main-color);
 }
 
+/****** info-group ***********/
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+form {
+    border: solid 1px var(--main-bg-color);
+}
+form i {
+    background: var(--filter-bg-color);
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-filter {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-filter i {
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+.btn-filter button {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: solid 2px var(--grey);
+    padding: 20px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-bar i {
+    font-size: 13px;
+    border: solid 1px var(--grey);
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .section-title {
     margin: 0;
