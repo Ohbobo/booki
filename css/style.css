@@ -1,6 +1,9 @@
 /****** General ***********/
-* {
+*, ::before, ::after {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -24,6 +27,38 @@ body {
     padding: 0 50px;
     box-sizing: border-box;
 }
+
+
+/****** header ***********/
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 20px;
+}
+
+.link-menu {
+    height: 100%;
+    display: flex;
+    gap: 70px;
+}
+
+.link-menu a {
+    padding-top: 10px;
+    text-decoration: none;
+    color: #000000;
+    border-top: solid 2px transparent;
+}
+
+.link-menu a:hover {
+    color: var(--main-color);
+    border-top-color: var(--main-color);
+}
+
 
 .section-title {
     margin: 0;
@@ -158,5 +193,21 @@ body {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /* header */
+
+    nav {
+        display: block;
+    }
+
+    nav img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .link-menu {
+        justify-content: space-around;
+        align-items: center;
+        border: solid 2px black;
+    }
+
 }
