@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -27,6 +32,10 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
 }
 
 
@@ -68,12 +77,62 @@ nav img {
     gap: 35px;
 }
 
+.headline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
 form {
+    width: 380px;
+    height: 50px;
+    display: flex;
+}
+form .icon {
+    background: var(--main-bg-color);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px 0 0 15px;
+}
+
+.icon i {
+    color: #000000;
+}
+
+form input {
     border: solid 1px var(--main-bg-color);
+    outline: none;
+    text-align: center;
 }
-form i {
-    background: var(--filter-bg-color);
+
+form input::placeholder {
+    position: relative;
+    top: 2px;
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
 }
+
+form button {
+    width: 132px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
 
 .filters {
     display: flex;
@@ -213,6 +272,36 @@ form i {
 
 
 
+/****** footer ***********/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+}
+
+.footer-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.footer-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-title {
+    font-weight: 700;
+}
+
+li {
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -271,3 +360,5 @@ form i {
     }
 
 }
+
+
