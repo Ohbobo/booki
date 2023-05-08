@@ -21,6 +21,10 @@ html {
     color: var(--main-color);
 }
 
+.card-rating .fa-star:nth-child(5) {
+    color: var(--filter-bg-color);
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     display: flex;
@@ -69,12 +73,14 @@ nav img {
     border-top-color: var(--main-color);
 }
 
+
 /****** info-group ***********/
 
 .info {
     display: flex;
     flex-direction: column;
     gap: 35px;
+    margin-bottom: 30px;
 }
 
 .headline {
@@ -83,9 +89,12 @@ nav img {
     gap: 8px;
 }
 
+.headline h1 {
+    font-size: 22px;
+}
+
 
 form {
-    width: 380px;
     height: 50px;
     display: flex;
 }
@@ -103,6 +112,7 @@ form .icon {
 }
 
 form input {
+    width: 200px;
     border: solid 1px var(--main-bg-color);
     outline: none;
     text-align: center;
@@ -118,7 +128,7 @@ form input::placeholder {
 }
 
 form button {
-    width: 132px;
+    width: 150px;
     background-color: var(--main-color);
     color: white;
     border: none;
@@ -140,6 +150,10 @@ form button {
     gap: 20px;
 }
 
+.filters h2 {
+    font-size: 18px;
+}
+
 .btn-filter {
     display: flex;
     gap: 20px;
@@ -152,7 +166,8 @@ form button {
 
 .btn-filter button {
     font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 17px;
     display: flex;
     align-items: center;
     background: transparent;
@@ -160,6 +175,11 @@ form button {
     padding: 20px;
     height: 50px;
     border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-filter button:hover {
+    background-color: var(--filter-bg-color);
 }
 
 .info-bar {
@@ -225,6 +245,52 @@ form button {
     width: 65%;
 }
 
+.hebergements h2 {
+    font-size: 22px;
+    margin-bottom: 33px;
+}
+
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.hebergement-card {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 20px;
+    min-width: 250px;
+    padding: 5px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hebergement-card img {
+    border-radius: 20px 20px 0 0;
+    height: 120px;
+    object-fit: cover;
+}
+
+.hebergement-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 15px;
+    margin: 8px 0 8px 0;
+}
+
+.hebergement-card-content p{
+    font-size: 14px;
+}
+
+
+.hebergement-card-content .card-rating .fa-star {
+    font-size: 14px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -270,6 +336,49 @@ form button {
     margin-bottom: 5px;
 }
 
+/****** Activity ***********/
+
+.activity {
+    padding: 30px;
+}
+
+.activity h2 {
+    font-size: 22px;
+    margin-bottom: 33px;
+}
+
+.activity-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.activity-card {
+    display: flex;
+    flex-direction: column;
+    width: 297.5px;
+    height: 439px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.activity-card img {
+    width: 297.5px;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.activity-title {
+    height: 59px;
+    display: flex;
+    align-items: center;
+    padding: 19px 20px;
+}
+
+.activity-title h3 {
+    font-size: 16px;
+}
 
 
 /****** footer ***********/
@@ -295,9 +404,8 @@ footer {
     font-weight: 700;
 }
 
-li {
+li:not(:nth-child(1)) {
     cursor: pointer;
-    font-weight: 400;
 }
 
 
